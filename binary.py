@@ -20,14 +20,25 @@ def binarySearch (arr, l, r, x):
     else:
         return -1
  
+def main():
 
-arr = [ 2, 3, 4, 10, 40 ]
-x = 11
+    #arr = [ 2, 3, 4, 10, 40 ]
+    x = 11
+    arr=[]
+    n=input("Enter the no of array elements:")
+    for i in range (0,n):
+        el=input("Enter the element:")
+        arr.append(el)
+    print(arr)
+    x=input("Enter the element to search:")
+    #print(x)
+    result = binarySearch(arr, 0, len(arr)-1, x)
  
+    if result != -1:
+    	print "Element is present at index %d" % result
+    else:
+        print "Element is not present in array"
+ 	  
 
-result = binarySearch(arr, 0, len(arr)-1, x)
- 
-if result != -1:
-    print "Element is present at index %d" % result
-else:
-    print "Element is not present in array"
+if __name__ == '__main__':
+    main()
